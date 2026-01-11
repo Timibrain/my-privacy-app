@@ -13,7 +13,6 @@ async function getEncryptionKey() {
     let key = await SecureStore.getItemAsync(KEY_STORE_ALIAS);
 
     if (!key) {
-        // Generate a random 256-bit key if one doesn't exist
         key = CryptoJS.lib.WordArray.random(256 / 8).toString();
         await SecureStore.setItemAsync(KEY_STORE_ALIAS, key);
     }

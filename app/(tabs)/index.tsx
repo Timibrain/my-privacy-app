@@ -100,6 +100,13 @@ export default function Home() {
         </View>
 
         <View className="w-full gap-4">
+
+          {/* --- RESTORED BUTTON --- */}
+          <Link href="/auth" asChild>
+            <Button title="Login / Join Network" variant="secondary" className="bg-blue-100" />
+          </Link>
+          
+
           <Link href="/modal" asChild>
             <Button title="View Secrets" />
           </Link>
@@ -109,6 +116,10 @@ export default function Home() {
             variant="secondary"
             onPress={() => setIsAuthenticated(false)}
           />
+
+          <Link href="/profile" asChild>
+            <Button title="Edit Profile" variant="secondary" />
+          </Link>
         </View>
 
       </View>
